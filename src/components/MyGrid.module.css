@@ -52,8 +52,9 @@
 
 .header1 {
   grid-area: header1;
-  background: #483d8b;
+  background: #450494;
   color: #fff;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,6 +64,8 @@
   grid-area: header2;
   background: #00bfff;
   color: #fff;
+  font-size: medium;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +75,7 @@
   grid-area: asideLeft;
   background: #ff1493;
   color: #fff;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,9 +89,10 @@
   grid-area: asideRight;
   background: #32cd32;
   color: #fff;
+  font-size: medium;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* ocupa toda a altura */
+  align-items: center; /* ocupa toda a altura */
   justify-content: center;
   height: 100%;
   border-top-left-radius: 1rem;
@@ -126,8 +131,9 @@
 
 .footer1 {
   grid-area: footer1;
-  background: #483d8b;
+  background: #450494;
   color: #fff;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,6 +145,7 @@
   grid-area: footer2;
   background: #00bfff;
   color: #fff;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
