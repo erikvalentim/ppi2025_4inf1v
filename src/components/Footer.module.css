@@ -1,0 +1,14 @@
+.footer1 {
+  grid-area: footer1;
+  background: #06a555;
+  color: #fff;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 4rem 1rem;  
+  min-height: 10rem;  
+  
+}

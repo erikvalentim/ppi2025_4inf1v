@@ -74,16 +74,7 @@
   }
 }
 
-.header1 {
-  grid-area: header1;
-  background: #111f12;
-  color: #f8f7f7;
-  font-size: medium;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 9rem; 
-}
+
 
 .main {
   grid-area: main;
@@ -92,19 +83,7 @@
   justify-content: center;
 }
 
-.footer1 {
-  grid-area: footer1;
-  background: #c91103;
-  color: #fff;
-  font-size: medium;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  padding: 4rem 1rem;  
-  min-height: 15rem;      
-}
+
 
 /* Responsividade */
 @media (max-width: 1200px) {

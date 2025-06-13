@@ -1,6 +1,7 @@
 import styles from "./MyGrid.module.css";
 import { MyText } from "./MyText";
 
+
 const cards = [
   {
     title: "Motivação 1",

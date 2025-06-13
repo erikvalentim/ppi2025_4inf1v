@@ -1,13 +1,17 @@
 import "./styles/theme.css";
 import "./styles/global.css";
-import { MyGrid } from "./components/MyGrid";
+import { Main } from "./components/Main";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 export default function App() {
 
   return (
     //React Fragment
     <>
-      <MyGrid />
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 }
