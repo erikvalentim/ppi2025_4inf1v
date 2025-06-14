@@ -20,7 +20,9 @@ export function MyGrid() {
 
   return (
     <div className={styles.container}>
-
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import styles from "./MyGrid.module.css";
+import styles from "./Main.module.css";
 import { MyText } from "./MyText";
 
 

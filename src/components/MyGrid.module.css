@@ -1,46 +1,3 @@
-.grid {
-  padding: 3rem;
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  width: 100%;
-}
-
-.card {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 26rem;
-  padding: 1rem;
-  margin: 0;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.cardTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
-
-.cardText {
-  font-size: 1.6rem;
-  margin: 0.5rem 0;
-}
-
 .container {
   display: grid;
   grid-template-areas:
@@ -48,45 +5,33 @@
     "asideLeft header2 asideRight"
     "asideLeft main asideRight"
     "asideLeft footer2 asideRight"
-    "footer1 footer1 footer1"; /* <-- alterado aqui */
+    "footer1 footer1 footer1"; 
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 6rem 4rem 1fr 4rem 4rem;
   min-height: 100vh;
   gap: 1rem;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 600px) {
     grid-template-areas:
       "header1 header1"
       "header2 header2"
       "asideLeft main"
       "footer2 footer2"
-      "footer1 footer1"; /* <-- alterado aqui */
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 6rem 4rem 1fr 4rem 4rem;
+      "footer1 footer1"; 
+   
+   
   }
   @media (max-width: 768px) {
     grid-template-areas:
       "header1"
       "main"
       "footer1";
-    grid-template-columns: 1fr;
-    grid-template-rows: 6rem 1fr 4rem;
+  
+   
   }
 }
 
-
-
-.main {
-  grid-area: main;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-/* Responsividade */
-@media (max-width: 1200px) {
+@media (max-width: 600px) {
   .container {
     grid-template-areas:
       "header1 header1"
@@ -94,8 +39,8 @@
       "asideLeft main"
       "footer2 footer2"
       "footer1 footer1";
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 6rem 4rem 1fr 4rem 4rem;
+  
+    
   }
   .asideRight {
     display: none;
@@ -108,8 +53,7 @@
       "header1"
       "main"
       "footer1";
-    grid-template-columns: 1fr;
-    grid-template-rows: 6rem 1fr 4rem;
+    
   }
   .asideLeft,
   .asideRight,

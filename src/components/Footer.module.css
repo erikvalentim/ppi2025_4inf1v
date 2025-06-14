@@ -1,14 +1,86 @@
 .footer1 {
-  grid-area: footer1;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
   background: #06a555;
   color: #fff;
   font-size: medium;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  padding: 4rem 1rem;  
-  min-height: 10rem;  
-  
+  padding: 4rem 2rem;
+  min-height: 8rem;
+  z-index: 100;
+}
+
+.containerIF {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.containerName {
+  flex: 1;
+  text-align: left;
+  color: #cced38;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: 'times new roman', serif;
+}
+
+
+.iconsCard {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .footer1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: unset;
+  }
+
+  .containerIF,
+  .containerName {
+    flex: unset;
+    margin: 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .iconsCard {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 0.7rem 1.5rem;
+  }
+
+  .containerIcons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
