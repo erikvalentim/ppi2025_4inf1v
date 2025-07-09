@@ -5,7 +5,6 @@ import "./styles/global.css";
 // import { Footer } from "./components/Footer";
 // import { LuckyNumber } from "./components/LuckyNumber";
 import { ProductList } from "./components/productlist";
-
 export default function App() {
 
   return (
@@ -16,6 +15,7 @@ export default function App() {
       {/* <Footer /> */}
       {/* <LuckyNumber /> */}
       <ProductList/>
+     
     </>
   );
 }
