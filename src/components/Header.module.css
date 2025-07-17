@@ -5,7 +5,8 @@
   font-size: medium;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2rem;
   min-height: 9rem; 
   gap: 2rem;
 }
@@ -16,6 +17,19 @@
 
 .headerSlogan {
   font-size: 1.8rem;
+}
+
+.headerTitleArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.headerTotal {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #06a555;
+  margin-left: 2rem;
 }
 
 @media (max-width: 700px) {
