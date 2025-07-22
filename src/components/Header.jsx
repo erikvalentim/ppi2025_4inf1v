@@ -4,19 +4,24 @@ import { Link } from "react-router";
 
 export function Header({ cart }) {
   return (
-    <div className={styles.container}>
-      <Link to="/" className={styles.link}><h1>TJA Megastore</h1></Link>
+    <header className={styles.header}>
+      <div className={styles.logoRow} style={{ flexDirection: "column" }}>
+        <img
+          src="/WBP MEGAstore.png"
+          alt="Logo WBP"
+          className={styles.logoImg}
+          style={{ marginBottom: "0.5rem" }}
+        />
+        <span className={styles.logoText}>WBP Mega Store</span>
+      </div>
       <Link to="/cart" className={styles.link}>
         <div className={styles.cartInfo}>
           <ShoppingBasket size={32} />
           <p>
-            Total: ${" "}
-            {cart
-              .reduce((total, product) => total + product.price, 0)
-              .toFixed(2)}
+            {cart.length > 0 ? `Carrinho (${cart.length})` : "Carrinho vazio"}
           </p>
         </div>
       </Link>
-    </div>
+    </header>
   );
 }

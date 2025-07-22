@@ -20,7 +20,7 @@ export default function App() {
       <Header cart={cart} />
       <Routes>
         <Route path="/" element={<ProductList addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </>
   );

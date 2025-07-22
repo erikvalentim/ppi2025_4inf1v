@@ -29,15 +29,17 @@
 }
 
 .productButton {
-  background-color: var(--primary);
-  color: var(--gray-900);
+  background-color: #b71c1c;
+  color: #fff;
   border: none;
   padding: 1rem 2rem;
   border-radius: 1rem;
   cursor: pointer;
   font-size: 2rem;
+  font-weight: bold;
+  transition: background 0.2s;
 }
 
 .productButton:hover {
-  background-color: var(--primary-dark);
+  background-color: #d32f2f;
 }
