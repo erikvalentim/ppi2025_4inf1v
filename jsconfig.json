@@ -1,5 +1,3 @@
-{
-  "compilerOptions": {
-    "moduleResolution": "node"
-  }
+"scriconcerte pts": {
+  "start": "vite"
 }
