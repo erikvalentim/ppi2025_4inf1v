@@ -53,7 +53,6 @@ export default function App() {
   }
 
   return (
-    //React Fragment
     <>
       <Header cart={cart} />
       <Routes>

@@ -19,6 +19,6 @@ export function Header({ cart }) {
           </p>
         </div>
       </Link>
-    </div>
+    </header>
   );
 }

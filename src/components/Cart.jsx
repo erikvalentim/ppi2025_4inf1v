@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
+import { useNavigate } from "react-router";
+import { useState } from "react";
 
 export function Cart({ cart, onIncrease, onDecrease, onClear, onRemove }) {
   // Soma total de itens
