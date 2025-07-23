@@ -1,36 +1,28 @@
+import { useEffect, useState } from "react";
 import styles from "./MyGrid.module.css";
+import { Header } from "./Header";
+import { Main } from "./Main";
+import { Footer } from "./Footer";
 
 export function MyGrid() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const showAsideLeft = width >= 768;
+  const showAsideRight = width >= 1200;
+  const showHeader2 = width >= 768;
+  const showFooter2 = width >= 768;
+
   return (
     <div className={styles.container}>
-      <header className={styles.header1} />
-      <header className={styles.header2} />
-      <aside className={styles.aside} />
-      <div className={styles.main}>
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Card 1</h2>
-            <p>This is the first card.</p>
-          </div>
-          <div className={styles.card}>
-            <h2>Card 2</h2>
-            <p>This is the second card.</p>
-          </div>
-          <div className={styles.card}>
-            <h2>Card 3</h2>
-            <p>This is the third card.</p>
-          </div>
-          <div className={styles.card}>
-            <h2>Card 4</h2>
-            <p>This is the fourth card.</p>
-          </div>
-          <div className={styles.card}>
-            <h2>Card 5</h2>
-            <p>This is the fifth card.</p>
-          </div>
-        </div>
-      </div>
-      <footer className={styles.footer} />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
