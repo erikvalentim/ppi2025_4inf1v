@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "types": ["jest"]
+    "moduleResolution": "node"
   }
 }
