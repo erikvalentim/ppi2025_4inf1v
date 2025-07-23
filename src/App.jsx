@@ -10,8 +10,46 @@ export default function App() {
   
   const [cart, setCart] = useState([]);
 
+  function onIncrease(id) {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id
+          ? { ...item, quantity: (item.quantity || 1) + 1 }
+          : item
+      )
+    );
+  }
+
+  function onDecrease(id) {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id && (item.quantity || 1) > 1
+          ? { ...item, quantity: (item.quantity || 1) - 1 }
+          : item
+      )
+    );
+  }
+
+  function onClear() {
+    setCart([]);
+  }
+
   function addToCart(product) {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const found = prevCart.find((item) => item.id === product.id);
+      if (found) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            : item
+        );
+      }
+      return [...prevCart, { ...product, quantity: 1 }];
+    });
+  }
+
+  function onRemove(id) {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   }
 
   return (
@@ -20,7 +58,18 @@ export default function App() {
       <Header cart={cart} />
       <Routes>
         <Route path="/" element={<ProductList addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              onIncrease={onIncrease}
+              onDecrease={onDecrease}
+              onClear={onClear}
+              onRemove={onRemove}
+            />
+          }
+        />
       </Routes>
     </>
   );
