@@ -9,6 +9,7 @@ import { Cart } from "./components/Cart";
 export default function App() {
   
   const [cart, setCart] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para pesquisa
 
   function onIncrease(id) {
     setCart((prevCart) =>
@@ -52,11 +53,18 @@ export default function App() {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   }
 
+  function handleSearch(term) {
+    setSearchTerm(term); // Atualiza termo de pesquisa
+  }
+
   return (
     <>
-      <Header cart={cart} />
+      <Header cart={cart} onSearch={handleSearch} />
       <Routes>
-        <Route path="/" element={<ProductList addToCart={addToCart} />} />
+        <Route
+          path="/"
+          element={<ProductList addToCart={addToCart} searchTerm={searchTerm} />}
+        />
         <Route
           path="/cart"
           element={

@@ -3,7 +3,7 @@ import styles from "./ProductList.module.css";
 import { CircularProgress } from "@mui/material";
 import { Product } from "./Product";
 
-export function ProductList({ addToCart }) {
+export function ProductList({ addToCart, searchTerm }) {
   var category = "smartphones";
   var limit = 10;
   var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
@@ -27,10 +27,15 @@ export function ProductList({ addToCart }) {
     fetchProducts();
   }, []);
 
+  // Filtra produtos pelo termo de pesquisa
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes((searchTerm || "").toLowerCase())
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.productList}>
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <Product key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
