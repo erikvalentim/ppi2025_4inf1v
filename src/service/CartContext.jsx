@@ -1,3 +1,4 @@
+
 import { useState, useEffect, createContext } from "react";
 
 export const CartContext = createContext({
@@ -9,6 +10,7 @@ export const CartContext = createContext({
   cart: [],
   addToCart: () => {},
   updateQtyCart: () => {},
+  removeFromCart: () => {},
   clearCart: () => {},
 });
 
@@ -50,6 +52,10 @@ export function CartProvider({ children }) {
     }
   }
 
+  function removeFromCart(productId) {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  }
+
   function updateQtyCart(productId, quantity) {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -69,6 +75,7 @@ export function CartProvider({ children }) {
     cart: cart,
     addToCart: addToCart,
     updateQtyCart: updateQtyCart,
+    removeFromCart: removeFromCart,
     clearCart: clearCart,
   };
 

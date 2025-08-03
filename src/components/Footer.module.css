@@ -2,7 +2,7 @@
   left: 0;
   bottom: 0;
   width: 100vw;
-  background: #06a555;
+  background: #181818;
   color: #fff;
   font-size: medium;
   display: flex;
@@ -25,21 +25,32 @@
 .containerName {
   flex: 1;
   text-align: left;
-  color: #cced38;
+  color: #b71c1c;
   font-weight: bold;
   font-size: 1.6rem;
-  font-family: 'times new roman', serif;
+  font-family: 'Lato', Arial, sans-serif;
 }
 
 
 .iconsCard {
-  background: #fff;
+  background: #222;
   border-radius: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.containerIcons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconsCard svg {
+  color: #b71c1c !important;
 }
 
 @media (max-width: 900px) {

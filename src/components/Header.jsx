@@ -1,26 +1,24 @@
 import { useState } from "react";
 import { ShoppingBasket } from "lucide-react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import { Link } from "react-router";
 import logoImg from "./WBP MEGAstore.png";
 
 export function Header({ cart, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
+  const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
   function handleSearch(e) {
     e.preventDefault();
     if (onSearch) onSearch(searchTerm);
   }
 
-  // Soma total de itens
-  const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-
   return (
     <div className={styles.container}>
       <Link to="/" className={styles.link}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <img src={logoImg} alt="Logo WBP Megastore" className={styles.logoImg} />
-          <h1>WBP Megastore</h1>
+          <h1>-WBP- STORE</h1>
         </div>
       </Link>
       <form className={styles.searchForm} onSubmit={handleSearch}>
@@ -31,7 +29,7 @@ export function Header({ cart, onSearch }) {
           onChange={e => setSearchTerm(e.target.value)}
           className={styles.searchInput}
         />
-        <button type="submit" className={styles.searchButton}>prequisar🔎</button>
+        <button type="submit" className={styles.searchButton}>prequisar</button>
       </form>
       <Link to="/cart" className={styles.link}>
         <div className={styles.cartInfo} style={{ position: "relative" }}>
@@ -44,6 +42,11 @@ export function Header({ cart, onSearch }) {
           </p>
         </div>
       </Link>
+      <nav className={styles.nav}>
+        <Link to="/register" className={styles.link}>Registro</Link>
+        <Link to="/login" className={styles.link}>Login</Link>
+        <Link to="/home" className={styles.link}>Home</Link>
+      </nav>
     </div>
   );
 }

@@ -34,8 +34,6 @@
 .productButton {
   background-color: #b71c1c;
   color: #fff;
-  background-color: #b71c1c;
-  color: #fff;
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 0.7rem;
@@ -47,5 +45,87 @@
 
 .productButton:hover {
   background-color: #d32f2f;
-  background-color: #d32f2f;
+}
+
+.container {
+  background: #181818;
+  color: #f0f0f0;
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.productList {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  width: 100%;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.item {
+  background: #222;
+  border: 1px solid #b71c1c;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #b71c1c;
+  background: #333;
+  color: #fff;
+}
+
+.form button {
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.form button:hover {
+  background: #d32f2f;
+}
+
+.item button {
+  margin-right: 0.5rem;
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.item button:hover {
+  background: #d32f2f;
 }

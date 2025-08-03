@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import styles from "./Cart.module.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
+import styles from "./Cart.module.css";
 
 export function Cart({ cart, onIncrease, onDecrease, onClear, onRemove }) {
   // Soma total de itens
@@ -16,10 +15,6 @@ export function Cart({ cart, onIncrease, onDecrease, onClear, onRemove }) {
     <div className={styles.cartContainer}>
       <header className={styles.header}>
         <h2 className={styles.title}>Shopping Cart</h2>
-        <Link to="/" className={styles.homeButton}>
-          <span className={styles.homeIcon}>🎮</span>
-          Voltar para Home
-        </Link>
       </header>
 
       <section className={styles.cartListSection}>

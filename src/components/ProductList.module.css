@@ -16,3 +16,69 @@
   width: 100%;
   padding: 0;
 }
+
+.actionsRow {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.addColumn, .editColumn {
+  background: #222;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.addColumn h3, .editColumn h3 {
+  color: #b71c1c;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.editList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.editItem {
+  background: #181818;
+  border: 1px solid #b71c1c;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.actionBox {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.actionButton {
+  background: #222;
+  border: 1.5px solid #b71c1c;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.actionButton:hover {
+  background: #b71c1c;
+  color: #fff;
+  border-color: #d32f2f;
+}
