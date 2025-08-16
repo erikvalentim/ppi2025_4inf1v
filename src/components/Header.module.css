@@ -1,103 +1,118 @@
-.container {
-  background: #ffe600;
-  color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.container h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.containerImg img {
-  height: auto;
-  width: 100%;
-  max-width: 20rem;
-}
-
-.cartInfo {
-  border-radius: 1rem;
-  background-color: #160d5e;
-  color: #d8d8d8;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid #f4e40a;
-}
-
-.link {
-  text-decoration: none;
-  color: #d8f01f;
+body {
+  /* ... */
+  background-color: #cccaba; /* Amarelo Mercado Livre */
+  color: #333;
 }
 
 .header {
-  background: #f9f9f9;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
+  background-color: #ffe600;
+  color: #333;
+  padding: 1.5rem 2rem;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(255,230,0,0.08);
 }
 
-.nav {
+.logo {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #333;
+  gap: 1rem;
+}
+
+.logoText {
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header .cartBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  color: #3483fa;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 0 1px 4px rgba(52,131,250,0.10);
+  transition: background 0.2s;
+}
+
+.header .cartBtn:hover {
+  background: #ffe600;
+  color: #333;
+}
+
+.header .cartCount {
+  background: #3483fa;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.3rem 1rem;
+  font-size: 1.7rem;
+  margin-left: 0.3rem;
+}
+
+.header p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+nav {
+  display: flex;
   gap: 2rem;
 }
 
 .link {
-  color: #160d5e;
-  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s;
 }
 
 .link:hover {
-  background: #e1de06;
-  color: #fff;
+  background: #fff159;
 }
 
-.logoRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.logoImg {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logoText {
-  font-size: 2.5rem;
+.productButton {
+  background-color: #ffe600;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  transition: background 0.2s;
+  font-family:'Times New Roman', Times, serif;
 }
 
-.cartBadge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #e9ed10;
-  color: #fff;
-  border-radius: 50%;
-  padding: 0.2em 0.6em;
-  font-size: 0.9rem;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  z-index: 2;
+.productButton:hover {
+  background-color: #fff159;
 }
+
 

@@ -1,52 +1,45 @@
-import { useState } from "react";
-import { ShoppingBasket } from "lucide-react";
-import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import logoImg from "./EHM.png";
+import { Link } from "react-router-dom";
+import { ShoppingBasket } from "lucide-react";
+import { useContext } from "react";
+import { CartContext } from "../service/CartContext";
+import logo from "./EHM.png";
 
-export function Header({ cart, onSearch }) {
-  const [searchTerm, setSearchTerm] = useState("");
-  const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-
-  function handleSearch(e) {
-    e.preventDefault();
-    if (onSearch) onSearch(searchTerm);
-  }
+export function Header() {
+  const { cart } = useContext(CartContext);
+  const totalQty = cart.reduce((sum, p) => sum + p.quantity, 0);
 
   return (
-    <div className={styles.container}>
-      <Link to="/" className={styles.link}>
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <img src={logoImg} alt="Logo WBP Megastore" className={styles.logoImg} />
-          <h1>MERCADINHO DO ERIK</h1>
-        </div>
-      </Link>
-      <form className={styles.searchForm} onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Pesquisar produtos..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          className={styles.searchInput}
+    <header className={styles.header}>
+      <Link to="/" className={styles.logo}>
+        <img
+          src={logo}
+          alt="Logo Mercado Livre"
+          style={{
+            height: "90px",
+            width: "130px",
+            verticalAlign: "middle",
+            marginRight: "1rem",
+            borderRadius: "8px",
+            background: "#ffe600"
+          }}
         />
-        <button type="submit" className={styles.searchButton}>prequisar</button>
-      </form>
-      <Link to="/cart" className={styles.link}>
-        <div className={styles.cartInfo} style={{ position: "relative" }}>
-          <ShoppingBasket size={32} />
-          {totalItems > 0 && (
-            <span className={styles.cartBadge}>{totalItems}</span>
-          )}
-          <p>
-            no carrinho<br />
-          </p>
-        </div>
+        <span className={styles.logoText}>🛒</span>
       </Link>
-      <nav className={styles.nav}>
+      <div>
+        <Link to="/cart" className={styles.cartBtn}>
+          <ShoppingBasket size={32} />
+          <span className={styles.cartCount}>{totalQty}</span>
+        </Link>
+        <p>
+          Total $: {cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2)}
+        </p>
+      </div>
+      <nav>
         <Link to="/register" className={styles.link}>Registro</Link>
         <Link to="/login" className={styles.link}>Login</Link>
         <Link to="/home" className={styles.link}>Home</Link>
       </nav>
-    </div>
+    </header>
   );
 }
