@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ShoppingBasket } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import logoImg from "./WBP MEGAstore.png";
+import logoImg from "./EHM.png";
 
 export function Header({ cart, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,7 +18,7 @@ export function Header({ cart, onSearch }) {
       <Link to="/" className={styles.link}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <img src={logoImg} alt="Logo WBP Megastore" className={styles.logoImg} />
-          <h1>-WBP- STORE</h1>
+          <h1>MERCADINHO DO ERIK</h1>
         </div>
       </Link>
       <form className={styles.searchForm} onSubmit={handleSearch}>

@@ -17,13 +17,13 @@
 input {
   padding: 0.5rem;
   border-radius: 0.4rem;
-  border: 1px solid #b71c1c;
+  border: 1px solid #1d0258;
   background: #333;
   color: #fff;
 }
 
 button {
-  background: #b71c1c;
+  background: #12034f;
   color: #fff;
   border: none;
   border-radius: 0.4rem;
@@ -34,5 +34,5 @@ button {
 }
 
 button:hover {
-  background: #d32f2f;
+  background: #250458;
 }

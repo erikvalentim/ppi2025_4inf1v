@@ -1,6 +1,6 @@
 .container {
-  background: #181818;
-  color: #f0f0f0;
+  background: #929290;
+  color: #19169a;
   min-height: 80vh;
   padding: 2rem;
   display: flex;
@@ -26,7 +26,7 @@
 }
 
 .addColumn, .editColumn {
-  background: #222;
+  background: #130456;
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   min-width: 320px;
@@ -36,7 +36,7 @@
 }
 
 .addColumn h3, .editColumn h3 {
-  color: #b71c1c;
+  color: #babab0;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -49,12 +49,12 @@
 }
 
 .editItem {
-  background: #181818;
-  border: 1px solid #b71c1c;
+  background: #e7e705;
+  border: 1px solid #cfff0e;
   border-radius: 0.7rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  color: #f0f0f0;
+  color: #20085e;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -78,7 +78,7 @@
 }
 
 .actionButton:hover {
-  background: #b71c1c;
-  color: #fff;
-  border-color: #d32f2f;
+  background: #e3d50d;
+  color: #1d063a;
+  border-color: #080850;
 }

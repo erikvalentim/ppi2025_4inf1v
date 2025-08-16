@@ -13,19 +13,19 @@ export function Footer() {
       </div>
 
       <div className={styles.containerName}>
-        WESLEY BARROS PEREIRA
+        ERIK HENRIQUE DE MELO NASCIMENTO
       </div>
 
 
       <div className={styles.iconsCard}>
         <div className={styles.containerIcons}>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/erikvalentim" target="_blank" rel="noopener noreferrer">
             <Github size={20} color="#06a555" />
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/erik_valentim9/" target="_blank" rel="noopener noreferrer">
             <Instagram size={20} color="#06a555" />
           </a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/9Edimjr" target="_blank" rel="noopener noreferrer">
             <Facebook size={20} color="#06a555" />
           </a>
         </div>

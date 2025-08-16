@@ -1,5 +1,5 @@
 .container {
-  background: #181818;
+  background: #ffe600;
   color: #f0f0f0;
   display: flex;
   align-items: center;
@@ -21,22 +21,22 @@
 
 .cartInfo {
   border-radius: 1rem;
-  background-color: #222;
-  color: #f0f0f0;
+  background-color: #160d5e;
+  color: #d8d8d8;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  border: 1px solid #b71c1c;
+  border: 1px solid #f4e40a;
 }
 
 .link {
   text-decoration: none;
-  color: #b71c1c;
+  color: #d8f01f;
 }
 
 .header {
-  background: #181818;
+  background: #f9f9f9;
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
@@ -48,7 +48,7 @@
 }
 
 .link {
-  color: #b71c1c;
+  color: #160d5e;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -58,7 +58,7 @@
 }
 
 .link:hover {
-  background: #b71c1c;
+  background: #e1de06;
   color: #fff;
 }
 
@@ -91,7 +91,7 @@
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #d32f2f;
+  background: #e9ed10;
   color: #fff;
   border-radius: 50%;
   padding: 0.2em 0.6em;

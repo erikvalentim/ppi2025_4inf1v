@@ -26,13 +26,13 @@
 
 .productPrice {
   font-size: 1.2rem;
-  color: #b71c1c;
+  color: #e8dd13;
   font-weight: bold;
   margin: 1rem 0;
 }
 
 .productButton {
-  background-color: #b71c1c;
+  background-color: #f1f50b;
   color: #fff;
   border: none;
   padding: 0.7rem 1.5rem;
@@ -44,7 +44,7 @@
 }
 
 .productButton:hover {
-  background-color: #d32f2f;
+  background-color: #eafa0b;
 }
 
 .container {
@@ -73,8 +73,8 @@
 }
 
 .item {
-  background: #222;
-  border: 1px solid #b71c1c;
+  background: #e6f107;
+  border: 1px solid #ede911;
   border-radius: 0.7rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -95,13 +95,13 @@
   flex: 1;
   padding: 0.5rem;
   border-radius: 0.4rem;
-  border: 1px solid #b71c1c;
+  border: 1px solid #967272;
   background: #333;
   color: #fff;
 }
 
 .form button {
-  background: #b71c1c;
+  background: #eeee0d;
   color: #fff;
   border: none;
   border-radius: 0.4rem;
@@ -117,7 +117,7 @@
 
 .item button {
   margin-right: 0.5rem;
-  background: #b71c1c;
+  background: #e8ec0d;
   color: #fff;
   border: none;
   border-radius: 0.4rem;
@@ -127,5 +127,5 @@
 }
 
 .item button:hover {
-  background: #d32f2f;
+  background: #f3ff16;
 }

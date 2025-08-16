@@ -90,7 +90,7 @@
 
 .quantityButton {
   background: #444;
-  color: #fff;
+  color: #d5e31b;
   border: none;
   border-radius: 0.4rem;
   font-size: 1.2rem;
@@ -100,7 +100,7 @@
   transition: background 0.2s;
 }
 .quantityButton:hover {
-  background: #b71c1c;
+  background: #f4f007;
 }
 
 .quantity {
