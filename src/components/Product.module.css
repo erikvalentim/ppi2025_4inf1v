@@ -1,54 +1,47 @@
 .productCard {
-  border: 1px solid var(--color-secondary);
-  border-radius: 10px;
-  padding: 30px;
+  border: 1px solid rgb(32, 59, 156);
+  border-radius: 8px;
+  padding: 16px;
   text-align: center;
-  background-color: var(--gray-100);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  background-color: rgb(17, 31, 80);
+  width: 40rem;
 }
 
 .productImage {
-  width: 50%;
+  width: 80%;
   border-radius: 4px;
 }
 
 .productTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin: 8px 0;
 }
 
 .productDescription {
-  font-size: 2rem;
-  color: var(--color-text);
+  font-size: 1rem;
+  color: rgb(37, 100, 234);
 }
 
 .productPrice {
   font-size: 2rem;
-  color: var(--primary-dark);
+  color: rgb(37, 100, 234);
   font-weight: bold;
   margin: 8px 0;
 }
 
 .productButton {
-  background-color: #ffe600;
-  color: #333;
+  background-color: rgb(23, 54, 121);
+  color: rgb(37, 100, 234);
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  transition: background 0.2s;
-  font-family:'Times New Roman', Times, serif;
+  font-size: 1rem;
 }
 
 .productButton:hover {
-  background-color: #fff159;
+  background-color: rgb(17, 59, 151);
 }
 
 .productQty {
@@ -57,4 +50,19 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  border: none;
+}
+.productQty button {
+    
+  background-color: rgb(23, 54, 121);
+  color: rgb(37, 100, 234);
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.productQty button:hover {
+  background-color: rgb(17, 59, 151);
 }

@@ -1,16 +1,14 @@
- import styles from "./Product.module.css";
-import { useNavigate } from "react-router"; // Importa o hook
+import styles from "./Product.module.css";
+import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-export function Product({ product, addToCart }) {
-  const navigate = useNavigate(); // Instancia o hook
+export function Product({ product }) {
 
-  function handleAddToCart() {
-    addToCart(product);
-    navigate("/cart"); // Redireciona para o carrinho
-  }
-
+  const { addToCart } = useContext(CartContext);
+  const [qty, setQty] = useState(0);
   return (
-    <div key={product.id} className={styles.productCard}>
+    <div className={styles.productCard}>
       <img
         src={product.thumbnail}
         alt={product.title}
@@ -18,8 +16,15 @@ export function Product({ product, addToCart }) {
       />
       <h2 className={styles.productTitle}>{product.title}</h2>
       <p className={styles.productDescription}>{product.description}</p>
-      <p className={styles.productPrice}>${product.price}</p>
-      <button onClick={handleAddToCart} className={styles.productButton}>
+      <div className={styles.productQty}>
+        { qty === 0 ? <p className={styles.productPrice}>${product.price}</p> : <p className={styles.productPrice}>${(product.price * qty).toFixed(2)}</p> }
+      </div>
+      <button
+        className={styles.productButton}
+        onClick={() => {
+          addToCart(product);
+        }}
+      >
         ADD TO CART
       </button>
     </div>

@@ -1,161 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
-.cartContainer {
-  background: #75766d;
-  color: #927c7c;
-  border-radius: 1rem;
-  padding: 2rem;
-  min-height: 80vh;
-  font-family: "Lato", Arial, sans-serif;
-  display: flex;
+.cart {
+  display: grid;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 21, 33, 255) 0%,
+    rgba(10, 20, 117, 255) 100%
+  );
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
+  color: rgb(37, 100, 234);
+  grid-template-areas:
+    "title title"
+    "main checkout";
+    grid-template-columns: 70vw 25vw;
+    grid-template-rows: 20rem auto;
+    
+  margin-top: 7rem;
+}
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  grid-area: title;
+  text-align: center;
+  height: 10rem;
 }
 
-.title {
+.cart h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.cart p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.cart button {
+  background-color: rgb(23, 54, 121);
+  color: rgb(37, 100, 234);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.cart button:hover {
+  background-color: rgb(17, 59, 151);
+  transform: scale(1.05);
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgb(17, 31, 80);
+    border: 1px solid rgb(32, 59, 156);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+.checkout {
+  grid-area: checkout;
+  align-self: start;
+  padding-left: 2rem;
+}
+.checkout h3 {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.homeButton {
-  background: #d3ee09;
-  color: #fff;
-  border: none;
-  border-radius: 0.7rem;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.homeButton:hover {
-  background: #312f2f;
-}
+
 
 .cartList {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  list-style: none;
-  padding: 0;
+  grid-area: main;
+  align-self: start;
 }
-
-.cartItem {
-  background: #180744;
-  border: 1px solid #b71c1c;
-  border-radius: 0.7rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem;
-}
-
-.productImage {
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-  border-radius: 0.4rem;
-  border: 1px solid #b71c1c;
-}
-
-.productInfo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.productName {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.productPrice {
-  color: #b71c1c;
-  font-size: 1rem;
-}
-
-.quantityControl {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.quantityButton {
-  background: #444;
-  color: #d5e31b;
-  border: none;
-  border-radius: 0.4rem;
-  font-size: 1.2rem;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.quantityButton:hover {
-  background: #f4f007;
-}
-
-.quantity {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.removeButton {
-  background: #b71c1c;
-  color: #fff;
-  border: none;
-  border-radius: 0.4rem;
-  font-size: 1rem;
-  padding: 0.4rem 1rem;
-  cursor: pointer;
-  margin-left: 1rem;
-  transition: background 0.2s;
-}
-.removeButton:hover {
-  background: #d32f2f;
-}
-
-.summarySection {
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-}
-
-.summaryLabel {
-  color: #caef10;
-  font-size: 1rem;
-}
-
-.summaryValue {
-  font-size: 1.1rem;
-  color: #fff;
-  font-weight: bold;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.clearButton {
-  background: #10098b;
-  color: #fff;
-  border: none;
-  border-radius: 0.7rem;
-  padding: 0.7rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.clearButton:hover {
-  background: #f1f50c;
+.empty {
+  text-align: center;
+  grid-area: title;
+  margin-top: 30rem;
+  
 }

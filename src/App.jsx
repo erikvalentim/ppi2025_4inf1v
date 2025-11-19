@@ -5,8 +5,10 @@ import { Header } from "./components/Header";
 import { useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { Cart } from "./components/Cart";
-import { Register } from "./components/Register";
 import { Login } from "./components/Login";
+import { CartProvider } from "./context/CartContext";
+import { SessionProvider } from "./context/SessionContext";
+import { User } from "./components/User";
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -60,28 +62,18 @@ export default function App() {
 
   return (
     <>
-      <Header cart={cart} onSearch={handleSearch} />
-      <Routes>
-        <Route path="/" element={<Navigate to="/register" />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/home"
-          element={<ProductList addToCart={addToCart} searchTerm={searchTerm} />}
-        />
-        <Route
-          path="/cart"
-          element={
-            <Cart
-              cart={cart}
-              onIncrease={onIncrease}
-              onDecrease={onDecrease}
-              onClear={onClear}
-              onRemove={onRemove}
-            />
-          }
-        />
-      </Routes>
+      <SessionProvider>
+        <CartProvider>
+          <Header cart={cart} onSearch={handleSearch} />
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/register" element={<Login value={"Register"} />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/home"element={<User />}/>
+            <Route path="/cart"element={<Cart/>}/>
+          </Routes>
+        </CartProvider>
+      </SessionProvider>
     </>
   );
 }

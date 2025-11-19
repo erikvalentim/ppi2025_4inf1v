@@ -2,7 +2,7 @@ import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { ShoppingBasket } from "lucide-react";
 import { useContext } from "react";
-import { CartContext } from "../service/CartContext";
+import { CartContext } from "../context/CartContext";
 import logo from "./EHM.png";
 
 export function Header() {
@@ -36,7 +36,6 @@ export function Header() {
         </p>
       </div>
       <nav>
-        <Link to="/register" className={styles.link}>Registro</Link>
         <Link to="/login" className={styles.link}>Login</Link>
         <Link to="/home" className={styles.link}>Home</Link>
       </nav>
